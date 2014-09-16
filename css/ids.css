@@ -1,5 +1,5 @@
 #butt {
-	width: 90%;
+	height: 50%;
 	margin: 0 auto;
 	transition: width 0.1s;
 	-webkit-transition: width 0.1s;
@@ -10,4 +10,5 @@
 	background-color: rgba(0,0,0,0);
 	font-size: 72px;
 	font-family: font-family: 'Lato', Helvetica, sans-serif;
+	margin: 0 auto;
 }
