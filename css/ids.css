@@ -1,8 +1,8 @@
 #butt {
 	height: 50%;
 	margin: 0 auto;
-	transition: width 0.1s;
-	-webkit-transition: width 0.1s;
+	transition: height 0.1s;
+	-webkit-transition: height 0.1s;
 }
 
 #counter {

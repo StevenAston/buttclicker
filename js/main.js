@@ -10,6 +10,7 @@ butt.onclick = function() {
 	incrementCounter();
 	levelCheck();
 	updateCounter(count, increment);
+	buttResize();
 }
 
 function incrementCounter() {
@@ -22,20 +23,16 @@ function updateCounter(a, b) {
 }
 
 function buttResizeShrink() {
-	butt.style.width = "50%";
+	butt.style.height = "48%";
 }
 
 function buttResizeExpand() {
-	butt.style.width = "90%";
+	butt.style.height = "50%";
 }
 
 function buttResize() {
-	for (i = 90; i >= 80; i--) {
-		butt.style.width = i + "%";
-	}
-	for (i = 80; i <= 90; i++) {
-		butt.style.width = i + "%";
-	}
+	setTimeout(function() {buttResizeShrink();}, 1);
+	setTimeout(function() {buttResizeExpand();}, 100);
 }
 
 function levelCheck() {
