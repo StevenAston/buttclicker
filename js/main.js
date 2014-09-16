@@ -36,11 +36,17 @@ function buttResize() {
 
 function updateIncrement() {
 	if (count == 10) {
-		increment+=1;
+		increment=increment*2;
 	} else if (count == 100) {
-		increment+=3;
+		increment=increment*2;
 	} else if (count == 1000) {
-		increment+=10;
+		increment=increment*2;
+	} else if (count == 10000) {
+		increment=increment*2;
+	} else if (count == 100000) {
+		increment=increment*2;
+	} else if (count == 1000000) {
+		increment=increment*2;
 	}
 }
 
