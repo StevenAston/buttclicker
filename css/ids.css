@@ -1,0 +1,13 @@
+#butt {
+	width: 90%;
+	margin: 0 auto;
+	transition: width 0.1s;
+	-webkit-transition: width 0.1s;
+}
+
+#counter {
+	border: none;
+	background-color: rgba(0,0,0,0);
+	font-size: 72px;
+	font-family: font-family: 'Lato', Helvetica, sans-serif;
+}
