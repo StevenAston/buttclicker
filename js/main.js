@@ -1,20 +1,24 @@
 var butt = document.getElementById('butt');
 var clickCounterBox = document.getElementById('counter');
+var levelCounterBox = document.getElementById('level');
 var count = 0;
 var increment = 1;
+var handLevel = 1;
+var handLevelExp = 10;
 
 butt.onclick = function() {
-	count += increment;
-	clickCounterBox.value = count;
-	updateIncrement();
+	incrementCounter();
+	levelCheck();
+	updateCounter(count, increment);
 }
 
 function incrementCounter() {
 	count += increment;
 }
 
-function updateCounter() {
-	clickCounterBox.value = count;
+function updateCounter(a, b) {
+	clickCounterBox.value = Math.round(a) +  "  +" + Math.round(b);
+	levelCounterBox.value = "Hand Level " + handLevel;
 }
 
 function buttResizeShrink() {
@@ -34,20 +38,10 @@ function buttResize() {
 	}
 }
 
-function updateIncrement() {
-	if (count == 10) {
-		increment=increment*2;
-	} else if (count == 100) {
-		increment=increment*2;
-	} else if (count == 1000) {
-		increment=increment*2;
-	} else if (count == 10000) {
-		increment=increment*2;
-	} else if (count == 100000) {
-		increment=increment*2;
-	} else if (count == 1000000) {
-		increment=increment*2;
+function levelCheck() {
+	if (count >= handLevelExp) {
+		handLevelExp=count + (handLevelExp*1.4);
+		handLevel+=1;
+		increment=increment*1.4;
 	}
 }
-
-updateCounter();

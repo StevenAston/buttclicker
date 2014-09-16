@@ -10,5 +10,11 @@
 	background-color: rgba(0,0,0,0);
 	font-size: 72px;
 	font-family: font-family: 'Lato', Helvetica, sans-serif;
-	margin: 0 auto;
+}
+
+#level {
+	border: none;
+	background-color: rgba(0,0,0,0);
+	font-size: 24px;
+	font-family: font-family: 'Lato', Helvetica, sans-serif;
 }
