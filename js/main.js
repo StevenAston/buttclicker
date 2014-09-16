@@ -6,6 +6,7 @@ var increment = 1;
 butt.onclick = function() {
 	count += increment;
 	clickCounterBox.value = count;
+	updateIncrement();
 }
 
 function incrementCounter() {
@@ -30,6 +31,16 @@ function buttResize() {
 	}
 	for (i = 80; i <= 90; i++) {
 		butt.style.width = i + "%";
+	}
+}
+
+function updateIncrement() {
+	if (count == 10) {
+		increment+=1;
+	} else if (count == 100) {
+		increment+=3;
+	} else if (count == 1000) {
+		increment+=10;
 	}
 }
 
