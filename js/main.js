@@ -23,16 +23,18 @@ function updateCounter(a, b) {
 }
 
 function buttResizeShrink() {
-	butt.style.height = "48%";
+	butt.style.height = "46%";
+	butt.style.webkitTransform = "skewY(5deg) rotate(-5deg)";
 }
 
 function buttResizeExpand() {
 	butt.style.height = "50%";
+	butt.style.webkitTransform = "none";
 }
 
 function buttResize() {
 	setTimeout(function() {buttResizeShrink();}, 1);
-	setTimeout(function() {buttResizeExpand();}, 100);
+	setTimeout(function() {buttResizeExpand();}, 55);
 }
 
 function levelCheck() {
